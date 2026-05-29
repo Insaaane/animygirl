@@ -29,6 +29,10 @@ const darkShape = `data:image/png;base64,${readFileSync(
   join(process.cwd(), "public", "media", "visuals", "dark-bevel.png"),
 ).toString("base64")}`;
 
+const logoSource = `data:image/svg+xml;base64,${readFileSync(
+  join(process.cwd(), "src", "app", "icon.svg"),
+).toString("base64")}`;
+
 const unboundedFont = readFileSync(
   join(process.cwd(), "public", "media", "fonts", "unbounded-og-900.ttf"),
 );
@@ -112,13 +116,39 @@ export default function OpenGraphImage() {
           width: 720,
         }}
       >
-        <div style={{ fontSize: 31, color: "#FF5A4B", fontWeight: 700 }}>
-          Алина Насретдинова / @animygirl
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 16,
+            fontSize: 28,
+            color: "#FF5A4B",
+            fontWeight: 700,
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <img
+              src={logoSource}
+              alt=""
+              style={{
+                width: 54,
+                height: 54,
+                objectFit: "contain",
+              }}
+            />
+          </div>
+          <span>Алина Насретдинова / @animygirl</span>
         </div>
         <div
           style={{
             fontFamily: "Unbounded",
-            fontSize: 54,
+            fontSize: 52,
             lineHeight: 1,
             fontWeight: 900,
           }}

@@ -13,7 +13,7 @@ import { Container } from "@/shared/ui/Container";
 import { Reveal } from "@/shared/ui/Reveal";
 import { SectionHeading } from "@/shared/ui/SectionHeading";
 
-const icons = [Layers3, PenLine, Clapperboard, Megaphone, UsersRound, BarChart3] as const;
+const icons = [Layers3, PenLine, Megaphone, Clapperboard, UsersRound, BarChart3] as const;
 
 export function ServicesSection() {
   return (

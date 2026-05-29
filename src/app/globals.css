@@ -510,10 +510,7 @@ a {
 .tilt-card {
   --tilt-x: 0deg;
   --tilt-y: 0deg;
-  transform:
-    perspective(900px)
-    rotateX(var(--tilt-y))
-    rotateY(var(--tilt-x))
+  transform: perspective(900px) rotateX(var(--tilt-y)) rotateY(var(--tilt-x))
     translate3d(0, 0, 0);
   transform-style: preserve-3d;
   transition:
@@ -587,7 +584,7 @@ a {
 .section {
   position: relative;
   isolation: isolate;
-  padding: 112px 0;
+  padding: 88px 0;
   overflow: hidden;
 }
 
@@ -1826,7 +1823,7 @@ a {
 
 .contact-section {
   position: relative;
-  padding: 94px 0;
+  padding: 88px 0;
   color: var(--color-white);
   background: var(--color-ink);
   overflow: hidden;
@@ -2197,7 +2194,7 @@ a {
   }
 
   .section {
-    padding: 78px 0;
+    padding: 64px 0;
   }
 
   .section-heading h2 {
@@ -2345,7 +2342,7 @@ a {
   }
 
   .contact-section {
-    padding: 76px 0;
+    padding: 64px 0;
   }
 
   .contact-section__inner {
