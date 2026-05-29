@@ -25,11 +25,6 @@ export function HeroSection() {
             работа с блогерами и командой продакшена.
           </p>
           <ContactActions />
-          <div className="hero__metrics" aria-label="Ключевые показатели">
-            {heroMetrics.map((metric) => (
-              <MetricCard key={metric.value} {...metric} />
-            ))}
-          </div>
         </Reveal>
 
         <Reveal className="hero__visual" delay={0.12}>
@@ -48,6 +43,12 @@ export function HeroSection() {
             <PlayCircle aria-hidden="true" />
             <span>Reels / UGC / блогеры / продакшен</span>
           </div>
+        </Reveal>
+
+        <Reveal className="hero__metrics" delay={0.18} aria-label="Ключевые показатели">
+          {heroMetrics.map((metric) => (
+            <MetricCard key={metric.value} {...metric} />
+          ))}
         </Reveal>
       </Container>
 

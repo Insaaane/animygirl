@@ -8,6 +8,8 @@ import "@fontsource-variable/manrope";
 import "@fontsource-variable/unbounded";
 import "./globals.css";
 
+const ogImageUrl = absoluteUrl("/og-image.png");
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
   title: {
@@ -34,7 +36,8 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     images: [
       {
-        url: absoluteUrl("/opengraph-image"),
+        url: ogImageUrl,
+        secureUrl: ogImageUrl,
         width: 1200,
         height: 630,
         type: "image/png",
@@ -48,7 +51,11 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [
       {
-        url: absoluteUrl("/opengraph-image"),
+        url: ogImageUrl,
+        secureUrl: ogImageUrl,
+        width: 1200,
+        height: 630,
+        type: "image/png",
         alt: "Алина Насретдинова — SMM-специалист"
       }
     ]

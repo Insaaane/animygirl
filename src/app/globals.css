@@ -379,12 +379,17 @@ a {
   z-index: 2;
   display: grid;
   grid-template-columns: minmax(0, 1.08fr) minmax(330px, 0.72fr);
+  grid-template-areas:
+    "content visual"
+    "metrics visual";
   align-items: center;
-  gap: 72px;
+  column-gap: 72px;
+  row-gap: 0;
 }
 
 .hero__content {
   position: relative;
+  grid-area: content;
   max-width: 760px;
 }
 
@@ -405,6 +410,7 @@ a {
 }
 
 .hero__metrics {
+  grid-area: metrics;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
@@ -493,6 +499,7 @@ a {
 
 .hero__visual {
   position: relative;
+  grid-area: visual;
   min-height: 500px;
 }
 
@@ -2043,6 +2050,14 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .hero__grid {
+    grid-template-areas:
+      "content"
+      "visual"
+      "metrics";
+    gap: 56px;
+  }
+
   .hero {
     min-height: auto;
   }
@@ -2053,6 +2068,10 @@ a {
 
   .hero__visual {
     min-height: 520px;
+  }
+
+  .hero__metrics {
+    margin-top: 0;
   }
 
   .hero-photo {
@@ -2155,6 +2174,8 @@ a {
   .hero .metric-card {
     min-height: 98px;
     padding: 12px;
+    background: rgba(255, 255, 255, 0.58);
+    border-color: var(--color-line);
   }
 
   .hero .metric-card strong {
@@ -2163,6 +2184,7 @@ a {
 
   .hero .metric-card span {
     margin-top: 8px;
+    color: rgba(50, 64, 75, 0.75);
     font-size: 0.72rem;
   }
 
