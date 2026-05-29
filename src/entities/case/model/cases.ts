@@ -47,7 +47,6 @@ export const cases: PortfolioCase[] = [
       "/media/photos/dark-reels-1.png",
       "/media/photos/dark-reels-2.png"
     ],
-    statsImage: "/media/presentation/dark-stats.png",
     tone: "light"
   },
   {
@@ -75,9 +74,13 @@ export const cases: PortfolioCase[] = [
     ],
     images: [
       "/media/photos/electrolog-1.png",
-      "/media/photos/electrolog-2.png"
+      "/media/photos/electrolog-2.png",
+      "/media/photos/electrolog-result-1.png",
+      "/media/photos/electrolog-result-2.png",
+      "/media/photos/electrolog-result-3.png",
+      "/media/photos/electrolog-month-1.png"
     ],
-    statsImage: "/media/presentation/electrolog-stats.png",
+    statsImage: "/media/photos/electrolog-month-2.png",
     tone: "blue"
   },
   {
@@ -102,7 +105,6 @@ export const cases: PortfolioCase[] = [
       { value: "0", label: "репутационных компромиссов" }
     ],
     images: ["/media/photos/pavel-1.png", "/media/photos/pavel-2.png"],
-    statsImage: "/media/presentation/pavel-stats.png",
     tone: "dark"
   },
   {
@@ -129,7 +131,12 @@ export const cases: PortfolioCase[] = [
     images: [
       "/media/photos/asbaster-1.png",
       "/media/photos/asbaster-2.png",
-      "/media/photos/asbaster-3.png"
+      "/media/photos/asbaster-3.png",
+      "/media/photos/asbaster-4.png",
+      "/media/photos/asbaster-5.png",
+      "/media/photos/asbaster-6.png",
+      "/media/photos/asbaster-7.png",
+      "/media/photos/asbaster-8.png"
     ],
     tone: "light",
     teamCredit: true

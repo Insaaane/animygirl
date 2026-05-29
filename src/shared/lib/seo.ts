@@ -18,8 +18,12 @@ export function absoluteUrl(path = "/") {
 }
 
 export function createJsonLd(): JsonLdGraph {
+  const siteUrl = absoluteUrl();
   const personId = absoluteUrl("#person");
   const serviceId = absoluteUrl("#service");
+  const websiteId = absoluteUrl("#website");
+  const webpageId = absoluteUrl("#webpage");
+  const portraitUrl = absoluteUrl("/media/photos/portrait.png");
 
   return {
     "@context": "https://schema.org",
@@ -30,8 +34,8 @@ export function createJsonLd(): JsonLdGraph {
         name: siteConfig.name,
         alternateName: siteConfig.handle,
         jobTitle: "SMM-специалист и digital-маркетолог",
-        url: absoluteUrl(),
-        image: absoluteUrl("/media/photos/portrait.png"),
+        url: siteUrl,
+        image: portraitUrl,
         sameAs: [siteConfig.social.instagram, siteConfig.social.telegram],
         knowsAbout: services.map((service) => service.title),
         description: siteConfig.description
@@ -40,8 +44,8 @@ export function createJsonLd(): JsonLdGraph {
         "@id": serviceId,
         "@type": "ProfessionalService",
         name: "SMM и контент-продакшен Алины Насретдиновой",
-        url: absoluteUrl(),
-        image: absoluteUrl("/media/photos/portrait.png"),
+        url: siteUrl,
+        image: portraitUrl,
         areaServed: "Россия и международные проекты",
         provider: {
           "@id": personId
@@ -65,14 +69,36 @@ export function createJsonLd(): JsonLdGraph {
         }
       },
       {
-        "@id": absoluteUrl("#website"),
+        "@id": websiteId,
         "@type": "WebSite",
         name: siteConfig.title,
-        url: absoluteUrl(),
+        url: siteUrl,
         inLanguage: "ru-RU",
         publisher: {
           "@id": personId
         }
+      },
+      {
+        "@id": webpageId,
+        "@type": "WebPage",
+        name: siteConfig.title,
+        description: siteConfig.description,
+        url: siteUrl,
+        isPartOf: {
+          "@id": websiteId
+        },
+        about: {
+          "@id": personId
+        },
+        mainEntity: {
+          "@id": serviceId
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: portraitUrl
+        },
+        inLanguage: "ru-RU",
+        dateModified: "2026-05-29"
       },
       {
         "@id": absoluteUrl("#portfolio"),

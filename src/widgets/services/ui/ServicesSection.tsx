@@ -1,4 +1,11 @@
-import { BarChart3, Clapperboard, Layers3, Megaphone, PenLine, UsersRound } from "lucide-react";
+import {
+  BarChart3,
+  Clapperboard,
+  Layers3,
+  Megaphone,
+  PenLine,
+  UsersRound,
+} from "lucide-react";
 
 import { additionalProjects } from "@/entities/project/model/projects";
 import { services } from "@/entities/service/model/services";
@@ -11,6 +18,7 @@ const icons = [Layers3, PenLine, Clapperboard, Megaphone, UsersRound, BarChart3]
 export function ServicesSection() {
   return (
     <section className="section services-section" id="services">
+      <span className="bg-noise" aria-hidden="true" />
       <Container>
         <div className="services-grid">
           <Reveal>
@@ -19,10 +27,6 @@ export function ServicesSection() {
               title="Не просто публикации, а полный цикл медиа вокруг бренда"
               description="Собираю систему: от идеи и гипотез до съемок, упаковки, блогеров, публикации и отчетности."
             />
-            <div className="skills-line" id="skills">
-              SMM / стратегия / сценарии Reels / монтаж / дизайн / фотография /
-              мобильная съемка / UGC / руководство продакшен-командой
-            </div>
           </Reveal>
 
           <div className="service-list">

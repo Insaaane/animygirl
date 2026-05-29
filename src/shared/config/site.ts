@@ -5,7 +5,7 @@ export const siteConfig = {
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://animygirl.ru",
   title: "Алина Насретдинова | SMM-специалист и digital-маркетолог",
   description:
-    "SMM-специалист с 7+ годами опыта: стратегия, Reels, продакшен, UGC, блогеры, дизайн, монтаж и органический рост для брендов и личных проектов.",
+    "SMM-специалист и digital-маркетолог: стратегия, Reels, продакшен, UGC и органический рост для брендов. Кейсы до 3,5 млн просмотров и 1 млн охвата в месяц.",
   social: {
     instagram: "https://www.instagram.com/animygirl/",
     telegram: "http://t.me/animygirll"

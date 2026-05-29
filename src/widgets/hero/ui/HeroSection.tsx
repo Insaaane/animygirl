@@ -5,6 +5,7 @@ import { ContactActions } from "@/features/contact-links/ui/ContactActions";
 import { Container } from "@/shared/ui/Container";
 import { MetricCard } from "@/shared/ui/MetricCard";
 import { Reveal } from "@/shared/ui/Reveal";
+import { TiltCard } from "@/shared/ui/TiltCard";
 
 const heroMetrics = [
   { value: "7+ лет", label: "в создании контента и ведении соцсетей" },
@@ -15,12 +16,13 @@ const heroMetrics = [
 export function HeroSection() {
   return (
     <section className="hero" id="top">
+      <span className="bg-noise" aria-hidden="true" />
       <Container className="hero__grid">
         <Reveal className="hero__content">
           <h1>SMM, который соединяет стратегию, продакшен и органический рост</h1>
           <p className="hero__lead">
-            Алина Насретдинова ведет проекты от идеи до результата: сценарии,
-            съемки, монтаж, дизайн, работа с блогерами и командой продакшена.
+            Веду проекты от идеи до результата: сценарии, съемки, монтаж, дизайн,
+            работа с блогерами и командой продакшена.
           </p>
           <ContactActions />
           <div className="hero__metrics" aria-label="Ключевые показатели">
@@ -31,7 +33,7 @@ export function HeroSection() {
         </Reveal>
 
         <Reveal className="hero__visual" delay={0.12}>
-          <div className="hero-photo" aria-label="Портрет Алины Насретдиновой">
+          <TiltCard className="hero-photo" aria-label="Портрет Алины Насретдиновой">
             <Image
               src="/media/photos/portrait.png"
               alt="Алина Насретдинова, SMM-специалист"
@@ -41,7 +43,7 @@ export function HeroSection() {
               loading="eager"
               sizes="(max-width: 900px) 82vw, 430px"
             />
-          </div>
+          </TiltCard>
           <div className="hero-proof" aria-label="Форматы работы">
             <PlayCircle aria-hidden="true" />
             <span>Reels / UGC / блогеры / продакшен</span>

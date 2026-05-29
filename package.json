@@ -10,6 +10,8 @@
     "test": "vitest run"
   },
   "dependencies": {
+    "@fontsource-variable/manrope": "^5.2.8",
+    "@fontsource-variable/unbounded": "^5.2.8",
     "framer-motion": "latest",
     "lucide-react": "latest",
     "next": "latest",

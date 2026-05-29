@@ -5,6 +5,7 @@ import { Header } from "@/widgets/header/ui/Header";
 import { HeroSection } from "@/widgets/hero/ui/HeroSection";
 import { PricingSection } from "@/widgets/pricing/ui/PricingSection";
 import { ServicesSection } from "@/widgets/services/ui/ServicesSection";
+import { SkillsSection } from "@/widgets/skills/ui/SkillsSection";
 
 export default function HomePage() {
   return (
@@ -14,6 +15,7 @@ export default function HomePage() {
         <HeroSection />
         <CasesSection />
         <ServicesSection />
+        <SkillsSection />
         <PricingSection />
         <ContactSection />
       </main>

@@ -4,6 +4,8 @@ import type { ReactNode } from "react";
 import { siteConfig } from "@/shared/config/site";
 import { absoluteUrl, createJsonLd } from "@/shared/lib/seo";
 
+import "@fontsource-variable/manrope";
+import "@fontsource-variable/unbounded";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -19,6 +21,7 @@ export const metadata: Metadata = {
   creator: siteConfig.name,
   publisher: siteConfig.name,
   category: "marketing",
+  manifest: "/manifest.webmanifest",
   alternates: {
     canonical: absoluteUrl()
   },
@@ -34,6 +37,7 @@ export const metadata: Metadata = {
         url: absoluteUrl("/opengraph-image"),
         width: 1200,
         height: 630,
+        type: "image/png",
         alt: "Алина Насретдинова — SMM-специалист"
       }
     ]
@@ -42,7 +46,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteConfig.title,
     description: siteConfig.description,
-    images: [absoluteUrl("/opengraph-image")]
+    images: [
+      {
+        url: absoluteUrl("/opengraph-image"),
+        alt: "Алина Насретдинова — SMM-специалист"
+      }
+    ]
   },
   robots: {
     index: true,

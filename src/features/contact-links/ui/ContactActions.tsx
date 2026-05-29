@@ -1,7 +1,6 @@
-import { ArrowUpRight, Camera, Send } from "lucide-react";
-
 import { siteConfig } from "@/shared/config/site";
 import { ButtonLink } from "@/shared/ui/ButtonLink";
+import { InstagramIcon, TelegramIcon } from "@/shared/ui/SocialIcons";
 
 type ContactActionsProps = {
   compact?: boolean;
@@ -12,7 +11,7 @@ export function ContactActions({ compact = false }: ContactActionsProps) {
     <div className={`contact-actions ${compact ? "contact-actions--compact" : ""}`}>
       <ButtonLink
         href={siteConfig.social.telegram}
-        icon={compact ? ArrowUpRight : Send}
+        icon={TelegramIcon}
         external
         ariaLabel="Написать Алине в Telegram"
       >
@@ -20,7 +19,7 @@ export function ContactActions({ compact = false }: ContactActionsProps) {
       </ButtonLink>
       <ButtonLink
         href={siteConfig.social.instagram}
-        icon={Camera}
+        icon={InstagramIcon}
         variant="secondary"
         external
         ariaLabel="Открыть Instagram Алины"

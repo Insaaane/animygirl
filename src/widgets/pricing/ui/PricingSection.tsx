@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import type { CSSProperties } from "react";
 
 import { pricingPlans } from "@/entities/pricing/model/pricing";
 import { Container } from "@/shared/ui/Container";
@@ -8,6 +9,7 @@ import { SectionHeading } from "@/shared/ui/SectionHeading";
 export function PricingSection() {
   return (
     <section className="section pricing-section" id="pricing">
+      <span className="bg-noise" aria-hidden="true" />
       <Container>
         <Reveal>
           <SectionHeading
@@ -25,6 +27,9 @@ export function PricingSection() {
               key={plan.title}
               delay={index * 0.08}
             >
+              <span className="pricing-card__index" style={{ "--price-index": index } as CSSProperties}>
+                0{index + 1}
+              </span>
               <div>
                 <h3>{plan.title}</h3>
                 <strong>{plan.price}</strong>
