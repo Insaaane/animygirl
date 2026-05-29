@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Алина Насретдинова",
   handle: "@animygirll",
   role: "SMM-специалист",
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://animygirl.ru",
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://animygirl.netlify.app",
   title: "Алина Насретдинова | SMM-специалист и digital-маркетолог",
   description:
     "SMM-специалист и digital-маркетолог: стратегия, Reels, продакшен, UGC и органический рост для брендов. Кейсы до 3,5 млн просмотров и 1 млн охвата в месяц.",
